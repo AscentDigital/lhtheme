@@ -12,7 +12,7 @@
   </head>
 
   <body> 
-    <header class="home">
+    <header class="<?php if(is_front_page()){ echo 'home' }else{ echo 'default'; } ?>">
       <div class="gradient"></div>
       <?php if(is_front_page()){ ?>
       <video src="<?php echo get_template_directory_uri(); ?>/assets/leonidasheader01.webm" autoplay loop> 

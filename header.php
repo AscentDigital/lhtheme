@@ -14,8 +14,16 @@
   <body> 
     <header class="home">
       <div class="gradient"></div>
+      <?php if(is_front_page()){ ?>
       <video src="<?php echo get_template_directory_uri(); ?>/assets/leonidasheader01.webm" autoplay loop> 
       </video>
+      <?php }else{ ?>
+      <div class ="header-background" style="background-image: url(./img/mainbanner18.jpg);">
+        <div class="container">
+          <h1>Homes</h1>
+        </div>
+      </div>
+      <?php } ?>
       <nav>
         <div class="container"> 
           <div class="nav-block">

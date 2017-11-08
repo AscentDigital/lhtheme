@@ -1,7 +1,7 @@
 <?php wp_footer(); ?>
 <footer>
   <div class="container">
-    <img src="./img/logotop2.png" alt="">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/logotop2.png" alt="">
     <div class="copyright">
       Copyright © <?php echo date('Y'); ?> Leonidas Homes. All Rights Reserved.
     </div>

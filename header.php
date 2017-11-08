@@ -18,7 +18,7 @@
       <video src="<?php echo get_template_directory_uri(); ?>/assets/leonidasheader01.webm" autoplay loop> 
       </video>
       <?php }else{ ?>
-      <div class ="header-background" style="background-image: url(./img/mainbanner18.jpg);">
+      <div class ="header-background" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/mainbanner18.jpg);">
         <div class="container">
           <h1>Homes</h1>
         </div>

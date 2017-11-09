@@ -17,10 +17,24 @@
       <?php if(is_front_page()){ ?>
       <video src="<?php echo get_template_directory_uri(); ?>/assets/leonidasheader01.webm" autoplay loop> 
       </video>
-      <?php }else{ ?>
-      <div class ="header-background" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/mainbanner18.jpg);">
+      <?php 
+        }else{
+          $thumb_url = wp_get_attachment_image_src(get_post_thumbnail_id(), '', false);
+          $bg = $thumb_url[0];
+
+          if(!is_page()){
+            $bg = get_template_directory_uri() . '/img/mainbanner14.jpg';
+          }
+      ?>
+      <div class ="header-background" style="background-image: url(<?php echo $bg; ?>);">
         <div class="container">
-          <h1>Homes</h1>
+          <h1><?php 
+            if(is_page()){
+              the_title();
+            }else{
+              echo 'Homes';
+            }
+          ?></h1>
         </div>
       </div>
       <?php } ?>
@@ -32,18 +46,12 @@
             </div>
             <div class="nav-list primary_nav_wrap hidden-xs">
               <div id="primary_nav_wrap">
-                <ul>
-                  <li class = "active"><a href="<?php echo get_template_directory_uri(); ?>/index.html">Home</a></li>
-                  <li><a href="#">leonidas</a>
-                    <ul>
-                      <li><a href="<?php echo get_template_directory_uri(); ?>/about.html">about</a></li>
-                      <li><a href="<?php echo get_template_directory_uri(); ?>/heritage.html">our heritage</a></li> 
-                    </ul>
-                  </li> 
-                  <li><a href="<?php echo get_template_directory_uri(); ?>/homes.html">homes</a></li>
-                  <li><a href="<?php echo get_template_directory_uri(); ?>/gallery.html">galleries</a></li>
-                  <li><a href="<?php echo get_template_directory_uri(); ?>/contact.html">contact</a></li>
-                </ul>
+                <?php 
+                  $args = array(
+                    'theme_location' => 'primary'
+                  );
+                  wp_nav_menu($args); 
+                  ?> 
                 </div>
             </div>
             <div class="nav-list mobile-menu visible-xs">

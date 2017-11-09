@@ -30,4 +30,20 @@
 		add_theme_support('post-formats', array('aside', 'gallery', 'link'));
 	}
 	add_action('after_setup_theme', 'setup');
+
+	function homes_cpt() {
+		register_post_type( 'homes', array(
+		  'labels' => array(
+		    'name' => 'Homes',
+		    'singular_name' => 'Home',
+		   ),
+		  'description' => 'Homes Custom Post Type',
+		  'public' => true,
+		  'publicly_queryable' => true,
+		  'menu_position' => 20,
+		  'supports' => array( 'title', 'editor', 'custom-fields', 'author', 'thumbnail', 'excerpt' ),
+		  'taxonomies' => array('category')
+		));
+	}
+	add_action( 'init', 'homes_cpt' );
 ?>

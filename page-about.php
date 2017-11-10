@@ -59,7 +59,7 @@ As the process unfolds, we’ll help you select any of the elements that you nee
 
           $args = array(
               'post_type' => 'officer',
-              'order' => 'DESC',
+              'order' => 'ASC',
               'orderby' => 'post_date'
           );
           $query = new WP_Query($args);

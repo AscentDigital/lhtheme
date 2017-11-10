@@ -70,11 +70,13 @@ As the process unfolds, we’ll help you select any of the elements that you nee
           ?>
 
           <!-- Officer -->
-          <div class="col-md-4">
+          <div class="col-md-4" style ="min-height:470px;">
             <img class = "team-image" src = "<?php echo $thumb_url[0]; ?>">
             <h2><?php the_title(); ?></h2>
             <h3><?php the_field('position') ?></h3>
+            <div style = "width:80%;">
             <?php the_content(); ?>
+            </div>
           </div>
           <!-- Officer -->
         <?php

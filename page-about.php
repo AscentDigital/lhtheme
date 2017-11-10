@@ -55,73 +55,33 @@ As the process unfolds, we’ll help you select any of the elements that you nee
           Our Team
         </div>
         <div class="row">
-          <!-- CEO -->
+          <?php  
+
+          $args = array(
+              'post_type' => 'officer',
+              'order' => 'DESC',
+              'orderby' => 'post_date'
+          );
+          $query = new WP_Query($args);
+          if($query->have_posts()){
+            while($query->have_posts()){
+              $query->the_post();
+              $thumb_url = wp_get_attachment_image_src(get_post_thumbnail_id(), '', false);
+          ?>
+
+          <!-- Officer -->
           <div class="col-md-4">
-            <img class = "team-image" src = "<?php echo get_template_directory_uri(); ?>/img/team01.jpg">
-            <h2>Vasilis Rallis</h2>
-            <h3>CEO</h3>
-            <p>
-              Vasilis Rallis learned the value of hard work and the business insights of a courageous leader who successfully built many businesses.
-            </p>
+            <img class = "team-image" src = "<?php echo $thumb_url[0]; ?>">
+            <h2><?php the_title(); ?></h2>
+            <h3><?php the_field('position') ?></h3>
+            <?php the_content(); ?>
           </div>
-          <!-- CEO -->
-
-          <!-- Property Expert -->
-          <div class="col-md-4">
-            <img class = "team-image" src = "<?php echo get_template_directory_uri(); ?>/img/team02.jpg">
-            <h2>Sofia Rallis</h2>
-            <h3>Property Expert</h3>
-            <p>
-              Sofia is a licensed Realtor that specializes in finding, designing and marketing properties.
-            </p>
-          </div>
-          <!-- Property Expert -->
-
-
-          <!-- Construction Manager -->
-          <div class="col-md-4">
-            <img class = "team-image" src = "<?php echo get_template_directory_uri(); ?>/img/teamnofoto1.png">
-            <h2>Jerry Sparks</h2>
-            <h3>Construction Manager</h3>
-            <p>
-              Jerry brings 30+ years of Home construction and practical knowledge to the Leonidas Team.<br><br>
-            </p>
-          </div>
-          <!-- Construction Manager -->
-
-          <!-- Operations Manager -->
-          <div class="col-md-4">
-            <img class = "team-image" src = "<?php echo get_template_directory_uri(); ?>/img/teamnofoto1.png">
-            <h2>Nestoras Stathi</h2>
-            <h3>Operations Manager</h3>
-            <p>
-              An Engineer by trade, Nestoras has a knack for analyzing and reviewing the details of home construction.
-            </p>
-          </div>
-          <!-- Operations Manager -->
-
-          <!-- Property Manager -->
-          <div class="col-md-4">
-            <img class = "team-image" src = "<?php echo get_template_directory_uri(); ?>/img/team03.jpg">
-            <h2>Debra Ellender</h2>
-            <h3>Property Manager</h3>
-            <p>
-              With over 30 years’ in residential real estate, Debra brings invaluable experience and knowledge.
-            </p>
-          </div>
-          <!-- Property Manager -->
-
-          <!-- Daily Operations -->
-          <div class="col-md-4">
-            <img class = "team-image" src = "<?php echo get_template_directory_uri(); ?>/img/team05.jpg">
-            <h2>Stephen Vaskas</h2>
-            <h3>Daily Operations</h3>
-            <p>
-              The muscle of the bunch, Stephen, makes up for experience with a “can do” attitude and attention to detail.
-            </p>
-          </div>
-          <!-- Daily Operations -->
-
+          <!-- Officer -->
+        <?php
+            }
+          }
+          wp_reset_query();
+        ?>
         </div>
       </div>
     </section>

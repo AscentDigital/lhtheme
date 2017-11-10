@@ -48,4 +48,21 @@
 		));
 	}
 	add_action( 'init', 'homes_cpt' );
+
+
+	function officer_cpt() {
+		register_post_type( 'officer', array(
+		  'labels' => array(
+		    'name' => 'Officers',
+		    'singular_name' => 'Officer',
+		   ),
+		  'description' => 'Officer Custom Post Type',
+		  'public' => true,
+		  'publicly_queryable' => true,
+		  'menu_position' => 20,
+		  'supports' => array( 'title', 'editor', 'custom-fields', 'author', 'thumbnail', 'excerpt' ),
+		  'taxonomies' => array('category')
+		));
+	}
+	add_action( 'init', 'officer_cpt' );
 ?>

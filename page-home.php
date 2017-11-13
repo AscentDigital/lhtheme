@@ -129,6 +129,11 @@
 		<div class="title">
 			Get in touch
 		</div>
+        <div class="row">
+          <div class="col-md-6">
+            <br><br><div class="alert alert-success success-alert" role="alert">Your Message has been Sent.</div>
+          </div>
+        </div>
 		<div class="contact-div">
 			<div class="contact">
 				<p>Ph 281-222-2888</p>

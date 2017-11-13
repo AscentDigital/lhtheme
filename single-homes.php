@@ -75,124 +75,26 @@
 	</section>
 	<!-- Home Details -->
 
-	<!-- Gallery Cards -->
-	<!-- <section id="gallery">
+	<section id="gallery">
 		<div class="container gallery picture"> 
 			<div class="row">
+				<?php 
+					$images = get_field('gallery');
+					foreach ($images as $image) {
+				?>
 				<div class="col-md-4 col-sm-6">
 					<div class="card">
-						<a href="<?php echo get_template_directory_uri(); ?>/img/gallerypic01.jpg" data-lightbox="gallery-img" data-title="PASSION FOR THE INTERIORS">
-							<div class="thumb-box" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/gallerypic01.jpg)"> 
+						<a href="<?php echo $image['url']; ?>" data-lightbox="gallery-img" data-title="<?php echo $image['title']; ?>">
+							<div class="thumb-box" style="background-image: url(<?php echo $image['url']; ?>)"> 
 							</div></a>
 
 						</div>
 					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="card">
-							<a href="<?php echo get_template_directory_uri(); ?>/img/gallerypic02.jpg" data-lightbox="gallery-img" data-title="PASSION FOR THE INTERIORS"><div class="thumb-box" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/gallerypic02.jpg)">
-
-							</div></a>
-
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="card">
-							<a href="<?php echo get_template_directory_uri(); ?>/img/gallerypic03.jpg" data-lightbox="gallery-img" data-title="PASSION FOR THE INTERIORS"><div class="thumb-box" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/gallerypic03.jpg)">
-
-							</div></a>
-
-						</div>
-					</div>
-					<!--  -->
-					<div class="col-md-4 col-sm-6">
-						<div class="card">
-							<a href="<?php echo get_template_directory_uri(); ?>/img/gallerypic06.jpg" data-lightbox="gallery-img" data-title="PASSION FOR THE INTERIORS"><div class="thumb-box" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/gallerypic06.jpg)">
-
-							</div></a> 
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="card">
-							<a href="<?php echo get_template_directory_uri(); ?>/img/gallerypic04.jpg" data-lightbox="gallery-img" data-title="PASSION FOR THE INTERIORS"><div class="thumb-box" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/gallerypic04.jpg)">
-
-							</div></a>
-
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="card">
-							<a href="<?php echo get_template_directory_uri(); ?>/img/gallerypic05.jpg" data-lightbox="gallery-img" data-title="PASSION FOR THE INTERIORS"><div class="thumb-box" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/gallerypic05.jpg)">
-
-							</div></a>
-
-						</div>
-					</div>
-					<!--  -->
-					<div class="col-md-4 col-sm-6">
-						<div class="card">
-							<a href="<?php echo get_template_directory_uri(); ?>/img/gallerypic09.jpg" data-lightbox="gallery-img" data-title="PASSION FOR THE INTERIORS"><div class="thumb-box" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/gallerypic09.jpg)">
-
-							</div></a> 
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="card">
-							<a href="<?php echo get_template_directory_uri(); ?>/img/gallerypic08.jpg" data-lightbox="gallery-img" data-title="PASSION FOR THE INTERIORS"><div class="thumb-box" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/gallerypic08.jpg)">
-
-							</div></a> 
-						</div> 
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="card">
-							<a href="<?php echo get_template_directory_uri(); ?>/img/gallerypic07.jpg" data-lightbox="gallery-img" data-title="PASSION FOR THE INTERIORS"><div class="thumb-box" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/gallerypic07.jpg)">
-
-							</div></a> 
-						</div> 
-					</div>
-					<!--  -->
-					<!--  -->
-					<div class="col-md-4 col-sm-6">
-						<div class="card">
-							<a href="<?php echo get_template_directory_uri(); ?>/img/gallerypic10.jpg" data-lightbox="gallery-img" data-title="PASSION FOR THE INTERIORS"><div class="thumb-box" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/gallerypic10.jpg)">
-
-							</div></a> 
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="card">
-							<a href="<?php echo get_template_directory_uri(); ?>/img/gallerypic11.jpg" data-lightbox="gallery-img" data-title="PASSION FOR THE INTERIORS"><div class="thumb-box" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/gallerypic11.jpg)">
-
-							</div></a> 
-						</div> 
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="card">
-							<a href="<?php echo get_template_directory_uri(); ?>/img/gallerypic12.jpg" data-lightbox="gallery-img" data-title="PASSION FOR THE INTERIORS"><div class="thumb-box" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/gallerypic12.jpg)">
-
-							</div></a> 
-						</div> 
-					</div>
-					<!--  -->
-					<!--  -->
-					<div class="col-md-4 col-sm-6">
-						<div class="card">
-							<a href="<?php echo get_template_directory_uri(); ?>/img/gallerypic13.jpg" data-lightbox="gallery-img" data-title="PASSION FOR THE INTERIORS"><div class="thumb-box" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/gallerypic13.jpg)">
-
-							</div></a> 
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="card">
-							<a href="<?php echo get_template_directory_uri(); ?>/img/gallerypic14.jpg" data-lightbox="gallery-img" data-title="PASSION FOR THE INTERIORS"><div class="thumb-box" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/gallerypic14.jpg)">
-
-							</div></a> 
-						</div> 
-					</div> 
-					<!--  -->
+				<?php } ?>
 				</div>
 
 			</div>
-		</section> -->
+		</section>
 
 		<!-- Ready to -->
 		<div class="ready-to">

@@ -21,6 +21,14 @@
       $(this).toggleText('MENU', 'CLOSE');
     });
    });
- </script>
+ </script>   
+ <script>
+        lightbox.option({
+          'resizeDuration': 200,
+          'wrapAround': true,
+          'positionFromTop': 40,
+          'disableScrolling': false
+        })
+  </script>
 </body>
 </html>

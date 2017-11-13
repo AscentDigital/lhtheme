@@ -9,6 +9,12 @@
 		wp_enqueue_script( 'parallaxie', get_template_directory_uri() . '/js/parallaxie.js', array('jquery'), '1.0.0', true );
 		wp_enqueue_script( 'viewportjs', get_template_directory_uri() . '/js/ie10-viewport-bug-workaround.js', array('jquery'), '1.0.0', true );
 		wp_enqueue_script( 'lightboxjs', get_template_directory_uri() . '/js/lightbox.js', array('jquery'), '1.0.0', true );
+		wp_enqueue_script( 'lhtheme_contact_form', get_template_directory_uri() . '/js/custom.js', array('jquery-form'), '1.0.0', true );
+		wp_localize_script( "lhtheme_contact_form", 'lhtheme_contact_form_vars', array(
+	            'ajaxUrl' => admin_url( 'admin-ajax.php' ), //url for php file that process ajax request to WP
+	            'nonce' => wp_create_nonce( "lhtheme_contact_form_nonce" )
+	        )
+	    );
 	}
 
 	add_action('wp_enqueue_scripts', 'resources');
@@ -89,4 +95,47 @@
 		));
 	}
 	add_action( 'init', 'gallery_cpt' );
+
+	function lhtheme_contact_form_process() {
+    	$name = $_POST['name'];
+		$email = $_POST['email'];
+		$phone = $_POST['phone'];
+		$message = $_POST['message'];
+
+		$body = 'Full Name: ' . $name . "\r\n";
+		$body .= 'Email Address: ' . $email . "\r\n";
+		$body .= 'Phone: ' . $phone . "\r\n";
+		$body .= 'Message: ' . $message;
+
+		$success = 'false';
+		if(wp_mail(get_option('lhtheme_recipient_email', ''), 'Contact Form', $body)){
+			$success = 'true';
+		}
+
+		echo $success;
+	}
+	add_action("wp_ajax_lhtheme_contact_form", "lhtheme_contact_form_process");
+
+	//use this version for if you want the callback to work for users who are not logged in
+	add_action("wp_ajax_nopriv_lhtheme_contact_form", "lhtheme_contact_form_process");
+
+	add_action('admin_menu', 'theme_contact_setup_menu');
+ 
+	function theme_contact_setup_menu(){
+	    add_menu_page( 'Theme Options', 'Theme Options', 'manage_options', 'theme-option', 'init' );
+	}
+	 
+	function init(){
+		include get_template_directory() . '/includes/theme-options.php';
+	}
+
+	function update_theme_options(){
+		$email = $_POST['recipient-email'];
+		update_option('lhtheme_recipient_email', $email);
+		wp_redirect(admin_url('admin.php?page=theme-option&success'));
+		exit;
+	}
+
+	add_action( 'admin_post_nopriv_lhtheme_update_theme_options', 'update_theme_options' );
+	add_action( 'admin_post_lhtheme_update_theme_options', 'update_theme_options' );
 ?>

@@ -1,4 +1,3 @@
-<?php wp_footer(); ?>
 <footer>
   <div class="container">
     <img src="<?php echo get_template_directory_uri(); ?>/img/logotop2.png" alt="">
@@ -7,6 +6,7 @@
     </div>
   </div>
 </footer>
+<?php wp_footer(); ?>
 <!-- footer -->
   <script>
     jQuery(function( $ ){
@@ -20,6 +20,8 @@
       $('.nav-list-mobile').toggleClass('open');
       $(this).toggleText('MENU', 'CLOSE');
     });
+
+     
    });
  </script>   
  <script>

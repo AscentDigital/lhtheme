@@ -7,44 +7,7 @@ get_header();
         <div class="primary-title">
           Get in touch <span class = "blue-title">With Us</span>
         </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="alert alert-success success-alert" role="alert">Your Message has been Sent.</div>
-          </div>
-        </div>
-        <div class="contact-div">
-          <div class="contact">
-            <p>Ph 281-222-2888</p>
-            <p>vasilis@leonidashomes.com</p>
-            <p>1808 Fairview Street, Houston, TX 77006</p>
-          </div>
-          <div class="contact-form">
-            <div class="form">
-              <input type="text" placeholder="Name">
-            </div>
-            <div class="form">
-              <input type="text" placeholder="Phone">
-            </div>
-            <div class="form text-right hidden-xs">
-              <a href="#" class="btn-prime">
-                Send <img src="<?php echo get_template_directory_uri(); ?>/img/arrowsita1-right.png" alt="">
-              </a>
-            </div>
-          </div>
-          <div class="contact-form">
-            <div class="form">
-              <input type="text" placeholder="Email">
-            </div>
-            <div class="form">
-              <textarea placeholder="Message"></textarea>
-            </div>
-             <div class="form text-right visible-xs">
-              <a href="#" class="btn-prime">
-                Send <img src="<?php echo get_template_directory_uri(); ?>/img/arrowsita1-right.png" alt="">
-              </a>
-            </div>
-          </div>
-        </div>
+        <?php get_template_part('includes/contact-form') ?>
       </div>
     </section>
     <!-- .newsletter-section -->

@@ -4,6 +4,7 @@
  	</div>
  </div>
  <form id="lhtheme_contact_form">
+ 	<input type="hidden" name="action" value="lhtheme_contact_form">
  	<div class="contact-div">
  		<div class="contact">
  			<p>Ph 281-222-2888</p>

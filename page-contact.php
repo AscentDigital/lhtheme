@@ -7,6 +7,11 @@ get_header();
         <div class="primary-title">
           Get in touch <span class = "blue-title">With Us</span>
         </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="alert alert-success success-alert" role="alert">Your Message has been Sent.</div>
+          </div>
+        </div>
         <div class="contact-div">
           <div class="contact">
             <p>Ph 281-222-2888</p>

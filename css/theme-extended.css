@@ -331,3 +331,15 @@ header.default {
     color: #FFF;
     background-color: #161a20;
 }
+.success-alert{
+    background-color: #3c763d;
+    border-color:  #3c763d;
+    color: #FFF;
+    border-radius: 0px;
+    font-size: 18px;
+    text-transform: none;
+    text-align: left;
+    line-height: 29px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+}

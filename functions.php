@@ -73,4 +73,20 @@
 		));
 	}
 	add_action( 'init', 'officer_cpt' );
+
+	function gallery_cpt() {
+		register_post_type( 'gallery', array(
+		  'labels' => array(
+		    'name' => 'Galleries',
+		    'singular_name' => 'Gallery',
+		   ),
+		  'description' => 'Gallery Custom Post Type',
+		  'public' => true,
+		  'publicly_queryable' => true,
+		  'menu_position' => 20,
+		  'supports' => array( 'title', 'editor', 'custom-fields', 'author', 'thumbnail', 'excerpt' ),
+		  'taxonomies' => array('category')
+		));
+	}
+	add_action( 'init', 'gallery_cpt' );
 ?>

@@ -19,7 +19,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-9">
-				<img src="<?php echo $thumb_url[0]; ?>" class ="home-img img-responsive">
+				<img src="<?php echo get_field('main_image') ?>" class ="home-img img-responsive">
 			</div>
 			<div class="col-md-4 home-desc">
 				<div class="panel panel-default">

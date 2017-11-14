@@ -46,7 +46,27 @@
 					<div class="general-desc">
 						<!-- Detail -->
 						<div class="detail">
-							<?php the_field('general_description') ?>
+							<?php  
+								if( have_rows('general_description') ):
+
+							     // loop through the rows of data
+							    while ( have_rows('general_description') ) : the_row();
+
+							        if( get_row_layout() == 'general_description' ):
+
+							        	echo '<h4>'.get_sub_field('title').'</h4>
+							        		<p>'.get_sub_field('description').'</p>
+							        	';
+
+							        endif;
+							    endwhile;
+
+							else :
+
+							    // no layouts found
+
+							endif;
+							?>
 						</div>
 					</div>
 				</div>
@@ -57,7 +77,27 @@
 					<div class="room">
 						<!-- Detail -->
 						<div class="detail">
-							<?php the_field('room_dimensions') ?>
+							<?php  
+								if( have_rows('room_dimensions') ):
+
+							     // loop through the rows of data
+							    while ( have_rows('room_dimensions') ) : the_row();
+
+							        if( get_row_layout() == 'room_dimensions' ):
+
+							        	echo '<h4>'.get_sub_field('title').'</h4>
+							        		<p>'.get_sub_field('dimension').'</p>
+							        	';
+
+							        endif;
+							    endwhile;
+
+							else :
+
+							    // no layouts found
+
+							endif;
+							?>
 						</div>
 						<!-- /Detail -->
 					</div>

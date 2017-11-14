@@ -343,3 +343,6 @@ header.default {
     font-family: "Roboto", sans-serif;
     font-weight: 900;
 }
+.btn-prime{
+    border:0px;
+}

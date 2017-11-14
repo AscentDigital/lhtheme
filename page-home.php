@@ -116,7 +116,7 @@
 
 
 <!-- parallax-section -->
-<section class="parallax-section parallaxie" style='background: url("<?php echo get_template_directory_uri(); ?>/img/mainbanner10.jpg")' data-parallaxie='{"speed": -0.4"size": "auto"}'>
+<section class="parallax-section parallaxie" style='background: url("<?php echo get_template_directory_uri(); ?>/img/mainbanner10.jpg")' data-parallaxie='{"speed": -1"size": "cover"}'>
 	<div class="container">
 		<p>Get to know Leonidas Homes, Houston’s premier builder of luxury homes as unique as you are.</p>
 	</div>

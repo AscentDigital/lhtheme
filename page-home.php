@@ -13,17 +13,25 @@
 			</div>
 			<div class="set-2">
 				<h1>What we do</h1>  
-				<div>
-					<h2>Concept</h2>
-					<img src="<?php echo get_template_directory_uri(); ?>/img/iconshome1.png" alt="">
-				</div>
-				<div>
-					<h2>Planning</h2>
-					<img src="<?php echo get_template_directory_uri(); ?>/img/iconshome2.png" alt="">
-				</div>
-				<div>
-					<h2>Building</h2>
-					<img src="<?php echo get_template_directory_uri(); ?>/img/iconshome3.png" alt="">
+				<div class="row">
+					<div class="col-md-12">
+						<div>
+							<h2>Concept</h2>
+							<img src="<?php echo get_template_directory_uri(); ?>/img/iconshome1.png" alt="">
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div>
+							<h2>Planning</h2>
+							<img src="<?php echo get_template_directory_uri(); ?>/img/iconshome2.png" alt="">
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div>
+							<h2>Building</h2>
+							<img src="<?php echo get_template_directory_uri(); ?>/img/iconshome3.png" alt="">
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="set-3">

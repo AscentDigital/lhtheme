@@ -69,10 +69,14 @@
     
     <div class="nav-list-mobile visible-xs">
         <div><img src="<?php echo get_template_directory_uri(); ?>/img/logotop.png" alt="" width="100%"> </div>
-        <div><a href="<?php echo get_template_directory_uri(); ?>/index.html">Home</a></div>
-        <div><a href="<?php echo get_template_directory_uri(); ?>/about.html">about</a></div>
-        <div><a href="<?php echo get_template_directory_uri(); ?>/heritage.html">our heritage</a>   </div>
-        <div><a href="<?php echo get_template_directory_uri(); ?>/homes.html">homes</a></div>
-        <div><a href="<?php echo get_template_directory_uri(); ?>/gallery.html">galleries</a></div>
-        <div><a href="<?php echo get_template_directory_uri(); ?>/contact.html">contact</a> </div>
+        <?php  
+          $items = wp_get_nav_menu_items(3);
+          foreach ($items as $item) {
+            if($item->type != 'custom'){
+        ?>
+        <div><a href="<?php echo $item->url; ?>"><?php echo $item->title; ?></a></div>
+        <?php
+            }
+          }
+        ?>
     </div>

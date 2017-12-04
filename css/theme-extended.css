@@ -346,3 +346,12 @@ header.default {
 .btn-prime{
     border:0px;
 }
+
+@media (max-width: 768px) {
+    header {
+        height:auto !important;
+    }
+    header .home{
+        height:auto !important;
+    }
+}

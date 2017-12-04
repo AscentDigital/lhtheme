@@ -117,6 +117,9 @@
 
 	<section id="gallery">
 		<div class="container gallery picture"> 
+					<div class="primary-title">
+						Gallery
+					</div>
 			<div class="row">
 				<?php 
 					$images = get_field('gallery');

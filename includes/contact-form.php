@@ -7,7 +7,7 @@
  	<input type="hidden" name="action" value="lhtheme_contact_form">
  	<div class="contact-div">
  		<div class="contact">
- 			<p>Ph 281-222-2888</p>
+ 			<p>281-222-2888</p>
  			<p>vasilis@leonidashomes.com</p>
  			<p>1808 Fairview Street, Houston, TX 77006</p>
  		</div>

@@ -12,7 +12,7 @@
 				<p>Leonidas Homes is an elite builder that prefers to limit the volume of homes built and emphasize quality over quantity; this allows them to focus personal attention to its customers.</p>
 			</div>
 			<div class="set-2">
-				<h1>This is what we do for you</h1>  
+				<h1>What we do</h1>  
 				<div>
 					<h2>Concept</h2>
 					<img src="<?php echo get_template_directory_uri(); ?>/img/iconshome1.png" alt="">
@@ -106,7 +106,6 @@
 	<div class="container"> 
 		<div></div>
 		<div>
-			<img src="<?php echo get_template_directory_uri(); ?>/img/arrowsita1-u4517.png" alt="">
 			<a href="
 			" class="btn-prime btn-block">LET'S WORK TOGETHER</a>
 		</div>
@@ -118,7 +117,7 @@
 <!-- parallax-section -->
 <section class="parallax-section parallaxie" style='background: url("<?php echo get_template_directory_uri(); ?>/img/mainbanner10.jpg")' data-parallaxie='{"speed": -1"size": "cover"}'>
 	<div class="container">
-		<p>Get to know Leonidas Homes, Houston’s premier builder of luxury homes as unique as you are.</p>
+		<p>Leonidas Homes will make your dream home a reality</p>
 	</div>
 </section>
 <!-- .parallax-section -->

@@ -107,7 +107,7 @@
 						Virtual Tour
 					</div>
 					<div class="home-video">
-						<iframe class="actAsDiv" style="width:100%;height:100%;" src="<?php echo get_field('virtual_tour') ?>" frameborder="0" allowfullscreen=""></iframe>
+						<iframe class="actAsDiv" style="width:100%;height:100%;" src="https://www.youtube.com/embed/<?php echo get_field('virtual_tour') ?>" frameborder="0" allowfullscreen=""></iframe>
 					</div>
 				</div>
 			</div>
